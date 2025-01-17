@@ -10,11 +10,11 @@ app.use(bodyParser.json());
 app.use("/api/users", userRoute);
 
 app.get("/", (req, res) => {
-  res.send("welcome to project");
+   res.send("welcome to project");
 });
 
 app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
+   console.log("Server running on http://localhost:3000");
 });
 
 export default app;
