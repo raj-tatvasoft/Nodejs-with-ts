@@ -1,4 +1,5 @@
 import express, { Application } from "express";
+import "express-async-errors";
 import bodyParser from "body-parser";
 import userRoute from "@modules/user/userRoute";
 import { GlobalExceptionHandling } from "middleware/GlobalExceptionHandler";
