@@ -5,8 +5,8 @@ import { validateRequest } from "utils/validateRequest";
 import { CreateUserDTO } from "./dtos/createUserDTO";
 
 export const users: User[] = [
-   { id: 1, name: "John Doe", email: "john@example.com" },
-   { id: 2, name: "Jane Smith", email: "jane@example.com" },
+   { id: 1, name: "John Doe", email: "john@example.com", role: "Admin" },
+   { id: 2, name: "Jane Smith", email: "jane@example.com", role: "Employee" },
 ];
 
 class UserController extends BaseController {

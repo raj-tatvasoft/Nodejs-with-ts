@@ -8,15 +8,10 @@ import { LoginDTO } from "./dtos/loginDTO";
 export class AuthController extends BaseController {
    loginUser = async (req: Request, res: Response, next: NextFunction) => {
       await validateRequest(LoginDTO, req, res, next);
-      const user = users[0];
       // Create a JWT token
-      const token = jwt.sign(
-         { id: user.id, username: user.name },
-         process.env.SECRET_KEY!,
-         {
-            expiresIn: "1Years",
-         },
-      );
+      const token = jwt.sign({ ...users[0] }, process.env.SECRET_KEY!, {
+         expiresIn: "1Years",
+      });
 
       return this.sendSuccessResponse(res, { token }, "Login Success");
    };
