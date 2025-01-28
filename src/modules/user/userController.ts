@@ -4,7 +4,7 @@ import { BaseController } from "@modules/generic/baseController";
 import { validateRequest } from "utils/validateRequest";
 import { CreateUserDTO } from "./dtos/createUserDTO";
 
-const users: User[] = [
+export const users: User[] = [
    { id: 1, name: "John Doe", email: "john@example.com" },
    { id: 2, name: "Jane Smith", email: "jane@example.com" },
 ];
