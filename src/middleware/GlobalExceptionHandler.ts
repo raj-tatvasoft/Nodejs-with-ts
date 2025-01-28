@@ -6,9 +6,11 @@ export class CustomException extends Error {
    statusCode: number;
    message: string;
 
-   constructor(statusCode: number, message: string) {
+   constructor(message: string, statusCode?: number) {
       super(message);
-      this.statusCode = statusCode;
+      this.statusCode = statusCode
+         ? statusCode
+         : StatusCodes.INTERNAL_SERVER_ERROR;
       this.message = message;
    }
 }

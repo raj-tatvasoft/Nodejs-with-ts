@@ -13,11 +13,14 @@
   "description": "",
   "dependencies": {
     "body-parser": "^1.20.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
     "express": "^4.21.2",
     "express-async-errors": "^3.1.1",
     "http-status-codes": "^2.3.0",
     "nodemon": "^3.1.9",
-    "tsconfig-paths": "^4.2.0"
+    "tsconfig-paths": "^4.2.0",
+    "typeorm": "^0.3.20"
   },
   "devDependencies": {
     "@eslint/js": "^9.18.0",
